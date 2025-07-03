@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import ServiceCard from "@/components/ServiceCard";
 import { Link } from "react-router-dom";
-import { Volume2, Music2, Lightbulb, PartyPopper, MoveRight, CalendarDays } from "lucide-react";
+import { Code, Bot, Zap, Database, MoveRight, Laptop, Smartphone, Brain } from "lucide-react";
 
 const Index = () => {
   // Scroll to top on page load
@@ -12,25 +12,25 @@ const Index = () => {
 
   const featuredServices = [
     {
-      title: "Sound System",
-      description: "Professional sound systems for any size venue, from small gatherings to large festivals.",
-      icon: <Volume2 size={24} />,
+      title: "Full-Stack Engineering",
+      description: "We design and build robust web and mobile apps using modern frameworks like React, Next.js, Django, and FastAPI.",
+      icon: <Code size={24} />,
       imageSrc: "/lovable-uploads/708f9e32-840d-46a4-aaa4-75ad2689e16f.png",
-      link: "/services#sound"
+      link: "/services#fullstack"
     },
     {
-      title: "Lighting Equipment",
-      description: "Create the perfect atmosphere with our state-of-the-art lighting equipment and expert setup.",
-      icon: <Lightbulb size={24} />,
+      title: "AI Integration",
+      description: "We integrate GPT, LangChain, and other AI models into your products to enhance UX, automate tasks, and drive user value.",
+      icon: <Bot size={24} />,
       imageSrc: "/lovable-uploads/becfc2e3-b59f-4f86-afca-b9f6fc7b7c14.png",
-      link: "/services#lighting"
+      link: "/services#ai"
     },
     {
-      title: "DJ Services",
-      description: "Experienced DJs to keep your event energized with the perfect music selection.",
-      icon: <Music2 size={24} />,
+      title: "MVP Development",
+      description: "We help startups rapidly go from idea to working prototype and iterate toward product–market fit.",
+      icon: <Zap size={24} />,
       imageSrc: "/lovable-uploads/03e83f18-76a1-4349-a197-dbde03a93343.png",
-      link: "/services#dj"
+      link: "/services#mvp"
     }
   ];
 
@@ -43,9 +43,9 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-2">Our Services</h2>
+              <h2 className="text-3xl font-bold text-white mb-2">What We Do</h2>
               <p className="text-gray-400 max-w-2xl">
-                Professional equipment and expert technicians for all your sound and lighting needs
+                We're not just coders — we're technical partners that help founders and teams launch scalable, AI-powered products quickly and reliably.
               </p>
             </div>
             <Link 
@@ -70,44 +70,47 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Event Types Section */}
+      {/* Why Work With Us Section */}
       <section className="py-20 px-6 md:px-12 bg-psyco-black-light">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-2">Perfect for Any Event</h2>
+            <h2 className="text-3xl font-bold text-white mb-2">Why Work With Us</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              We provide custom sound and lighting solutions for a wide range of events
+              Built by engineers, not a digital agency. We act as an embedded team focused on real product outcomes.
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              { name: "Concerts", icon: <Volume2 size={32} /> },
-              { name: "Weddings", icon: <PartyPopper size={32} /> },
-              { name: "Corporate", icon: <CalendarDays size={32} /> },
-              { name: "Festivals", icon: <Music2 size={32} /> }
-            ].map((event, index) => (
+              { name: "Built by Engineers", icon: <Code size={32} />, description: "Not a digital agency" },
+              { name: "AI-Native", icon: <Brain size={32} />, description: "We use AI to speed up workflows" },
+              { name: "Fast Cycles", icon: <Zap size={32} />, description: "Clear deliverables, tight collaboration" },
+              { name: "Embedded Team", icon: <Laptop size={32} />, description: "Not a one-off vendor" },
+              { name: "Startup Focused", icon: <Smartphone size={32} />, description: "Early-stage and real outcomes" },
+              { name: "Full-Stack", icon: <Database size={32} />, description: "End-to-end product development" }
+            ].map((item, index) => (
               <div 
                 key={index}
                 className="glassmorphism flex flex-col items-center justify-center py-8 px-4 text-center card-hover animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-psyco-green-DEFAULT mb-4">
-                  {event.icon}
+                  {item.icon}
                 </div>
-                <h3 className="text-lg font-medium text-white">{event.name}</h3>
+                <h3 className="text-lg font-medium text-white mb-2">{item.name}</h3>
+                <p className="text-gray-400 text-sm">{item.description}</p>
               </div>
             ))}
           </div>
           
           <div className="mt-12 text-center">
-            <Link
-              to="/booking"
+            <a
+              href="mailto:hello@vtxlabs.io"
               className="inline-flex items-center bg-psyco-green-DEFAULT hover:bg-psyco-green-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 btn-glow"
             >
-              Book Your Event
+              Start Your Project
               <MoveRight className="ml-2 h-5 w-5" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -120,23 +123,23 @@ const Index = () => {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Elevate Your Event?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let's Build Something Together</h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-              Let's work together to create an unforgettable experience for your guests. Book our services today and bring your vision to life.
+              Whether you're validating a new idea or scaling a v1 product, we help you move faster with full-stack AI engineering.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/booking"
+              <a
+                href="mailto:hello@vtxlabs.io"
                 className="bg-psyco-green-DEFAULT hover:bg-psyco-green-dark text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
               >
-                Book Now
+                Email Us
                 <MoveRight className="ml-2 h-5 w-5" />
-              </Link>
+              </a>
               <Link
                 to="/services"
                 className="bg-transparent border border-psyco-green-DEFAULT text-psyco-green-DEFAULT hover:bg-psyco-green-DEFAULT/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
               >
-                View Services
+                Our Work
               </Link>
             </div>
           </div>

@@ -49,32 +49,31 @@ const HeroSection = () => {
             <div className="flex items-center mb-4">
               <div className="bg-green-500/20 text-green-400 rounded-full px-4 py-1 text-sm font-medium inline-flex items-center">
                 <Sparkles className="h-3.5 w-3.5 mr-1" />
-                Premium Sound & Light Services
+                AI-Powered Product Engineering
               </div>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-glow mb-6">
-              Elevate Your <span className="text-green-500">Event</span> Experience
+              Build Software <span className="text-green-500">Faster</span> with AI
             </h1>
             
             <p className="text-xl text-gray-300 mb-8">
-              Professional sound and lighting solutions that bring your event to life. 
-              From concerts to private parties, we deliver exceptional audiovisual experiences.
+              VTX Labs is a product engineering studio that helps startups prototype, build, and launch full-stack software products — faster — by combining engineering expertise with the power of AI.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/booking"
+              <a
+                href="mailto:hello@vtxlabs.io"
                 className="bg-green-500 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
               >
-                Book Now
+                Get Started
                 <MoveRight className="ml-2 h-5 w-5" />
-              </Link>
+              </a>
               <Link
                 to="/services"
                 className="bg-transparent border border-green-500 text-green-500 hover:bg-green-500/10 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
               >
-                Our Services
+                Our Work
               </Link>
             </div>
           </div>
